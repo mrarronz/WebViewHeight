@@ -64,6 +64,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if cell == nil {
             cell = UITableViewCell.init(style: .default, reuseIdentifier: "UITableViewCell")
         }
+        cell?.selectionStyle = .none
         for subView in (cell?.contentView.subviews)! {
             if subView.isKind(of: UIWebView.classForCoder()) {
                 subView.removeFromSuperview()
